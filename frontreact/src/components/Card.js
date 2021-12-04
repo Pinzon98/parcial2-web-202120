@@ -7,12 +7,12 @@ import React from 'react';
  */
 export const Card = (props) => {
   const { name, picture, price, isActive } = props;
-  const active = '';
-  if (isActive === true) {
-    active = 'inactive';
+  let active = 'card';
+  if (isActive === 'false') {
+    active = 'card inactive';
   }
   return (
-    <div className = 'card'>
+    <div className = {active}>
       <div className='card-header'>
         <p className='card-title'>{name}</p>
         <span className='material-icons card-favorite'>favorite_border</span>
